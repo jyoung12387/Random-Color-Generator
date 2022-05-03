@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+*,
+::after,
+::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex; /*Have to say display: flex to affect the child elements*/
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 180px;
+    margin-bottom: 4rem;
+    width: 100%;
+    background-color: white;
+    color: #1864FF;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 0 1rem;
+}
+.logo{
+    margin-left: 10rem;
+}
+.logo::after{
+    content: '';
+    display: block;
+    width: inherit;
+    height: 2px;
+    background-color: #fea9a4;
+    margin-top: 0.3rem;
+}
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-right: 6rem;
+}
+.nav-rgb, .nav-hex{
+    padding: 0 1rem;
+    text-decoration: none;
+    color: #1864FF;
+    transition: 150ms;
+}
+.nav-rgb::after, .nav-hex::after{
+    content: '';
+    display: block;
+    width: inherit;
+    height: 2px;
+    background-color: #fea9a4;
+    margin-top: 0.3rem;
+}
+.nav-rgb:hover, .nav-hex:hover{
+    color: #fea9a4;
+    /* border-bottom: solid 3px #1864FF; */
+}
+.nav-rgb::hover::after{
+    content: '';
+    background: red;
+    display: block;
+    width: 10px;
+    height: 10px;
+}
+.main-container{
+    display: flex;
+    /* margin-top: 2rem; */
+    /* width: 100%;
+    height: 100%; */
+}
+.container1{
+    display: flex; /*Have to say display: flex to affect the child elements*/
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    width: 1000px;
+    height: 600px;
+    background-color: white;
+    border: solid 2px #fea9a4;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 70%;
+    background-color: white;
+    color: white;
+    align-self: center;
+    margin: 1rem;
+    border-radius: 15px;
+    justify-content: space-evenly;
+    align-items: center;
+    /* justify-content: center; */
+}
+.output{
+    display: flex;
+    width: 40%;
+    height: 70%;
+    background-color: #1864FF;
+    align-self: center;
+    margin: 1rem;
+    border-radius: 15px;
+
+}
+
+.input p{
+    color: #1864FF;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    /* justify-content: center; */
+    width: 80%;
+    height: 12%;
+    margin-bottom: 0px;
+    /* padding:  */
+    /* margin-top: 4rem; */
+}
+.generate {
+    background-color: #1864FF;
+    font-size: 1.1rem;
+    color: white;
+    width: 140px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: 200ms;
+    /* align-self: flex-start; */
+}
+.generate:hover{
+    background-color: #fea9a4;
+}
+
+#result{
+    /* margin-top: 10rem; */
+    font-size: 1.8rem;
+}
+/* .container2{
+display: flex;  
+justify-content: center;
+margin: auto;
+width: 60%;
+height: 60%;
+background-color: white;
+border-radius: 15px;
+}
+.container3{
+justify-content: center;
+margin: auto;
+width: 33%;
+height: 33%;
+background-color: rgb(207, 116, 243);
+border-radius: 15px;
+} */
+
+@media (min-width: 860px) and (max-width: 1100px){
+    .container1{
+        width: 700px;
+        height: 500px;
+    }
+    #random-color-title, #result{
+        font-size: 1.5rem;
+    }
+    .nav-bar{
+        font-size: 1.5rem;
+    }
+}
+@media (min-width: 601px) and (max-width: 860px){
+    .container1{
+        width: 500px;
+        height: 500px;
+    }
+    #random-color-title, #result{
+        font-size: 1.2rem;
+    }
+    .nav-bar{
+        font-size: 1.3rem;
+    }
+}
+@media screen and (max-width: 670px) {
+    .container1{
+        width: 360px;
+        height: 500px;
+    }
+    #random-color-title, #result{
+        font-size: 1.2rem;
+    }
+    .nav-bar{
+        font-size: 1rem;
+    }
+}
